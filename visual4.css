@@ -1,0 +1,192 @@
+/* comesso da parte superior */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#cabecalho-fixo {
+   
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background-color: #004a99;
+    box-shadow: 0 4px 6px rgba(0,0,0, 0.15);
+    padding: 10px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    transition: color 0.3s ease
+
+}
+
+nav ul li a:hover {
+    color:#ffcc00;
+}
+
+.espacamento-cabecalho {
+    
+    height: 100px; 
+}
+/* fim da aprte superior */
+
+body {
+    background-color: #1a1a1a; 
+    color: #ffffff;             
+    font-family: Arial, sans-serif; 
+}
+
+
+h1, h2, h3 {
+    color: #ffffff; 
+    margin-bottom: 15px; 
+}
+
+
+p {
+    color: #ffffff;
+    margin-bottom: 10px; 
+}
+
+main section {
+    
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    padding: 0 50px; 
+}
+
+#bazares {
+    
+    padding-left: 20px; 
+}
+
+
+#bazares ul li {
+    margin-bottom: 8px; 
+}
+
+/* tenho a impressão que essa versão fuciona melhoe que o outro jeito que fiz nas paginas anteriores. tambem tenho quase certeza que essas linhas da 83 ate 89 não estão funcionado*/
+h2 {
+    color: #ffffff; 
+    font-size: 1.8rem; 
+    font-weight: 700; 
+    margin-bottom: 25px; 
+    border-bottom: 2px solid rgba(240, 239, 237, 0.5); 
+    padding-bottom: 5px; 
+}
+
+
+h3 {
+    color: #ffffff; 
+    font-size: 1.3rem; 
+    font-weight: 600; 
+    margin-top: 30px;
+    margin-bottom: 15px; 
+}
+
+
+.imagen {
+    height: 300px;
+    width: auto;
+    display: block;
+
+/* vocé esqueceu dessa parte mais de uma vez  */
+margin: 20px auto; 
+}
+
+/**/
+p {
+    color: #ffffff;
+    
+   
+    margin-bottom: 20px; 
+    
+   
+    line-height: 1.6; 
+}
+
+/*comesso da parte inferior*/
+#contato-rodape {
+    padding-left: 8px;
+}
+
+#contato-rodape ul li {
+margin-bottom: 15px;
+}
+
+#contato-rodape {
+    background-color: #004a99;
+    box-shadow: 0 4px 6px rgba(0,0,0, 0.15);
+    padding: 10px 30px;
+}
+
+#contato-rodape {
+    background-color: #004a99;
+    box-shadow: 0 4px 6px rgba(0,0,0, 0.15);
+    padding: 10px 30px;
+    
+    color: #ffffff; 
+   
+}
+
+
+#contato-rodape h3 {
+    color: #ffcc00; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    margin-bottom: 15px; 
+}
+
+
+#contato-rodape p {
+    color: #ffffff; 
+    font-size: 14px;
+    line-height: 1.4; 
+   
+    margin-bottom: 5px; 
+}
+
+
+#contato-rodape p a {
+    color: #ffcc00; 
+    font-weight: bold;
+    text-decoration: none; 
+}
+
+#contato-rodape p a:hover {
+    text-decoration: underline; 
+}
+
+a:not(#cabecalho-fixo a):not(#contato-rodape a) {
+    color: #00bfff; 
+}
+
+a:hover:not(#cabecalho-fixo a):not(#contato-rodape a) {
+    color: #4ddbff; 
+}
+/* fim da parte inferior *\ 

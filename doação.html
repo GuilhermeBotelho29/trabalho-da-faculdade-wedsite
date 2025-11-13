@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associação Fortaleza Azul- Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="visual5.css">
+</head>
+
+<body>
+    <header id="cabecalho-fixo">
+        <a href="inicio.html" id="logo-link">
+            <img src="logo-faz.png.jpg" alt="Logo Associação Fortaleza Azul" class="logo">
+
+        </a>
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="doação.html">doação</a></li>             
+                <li><a href="quem-somos.html">Quem Somos</a></li> 
+                <li><a href="projetos.html">Projetos e atividades</a></li>
+                <li><a href="https://www.instagram.com/fortalezaazul/"target="_blank">Instagram</a></li>
+                <li><a href="autismo.html">Autismo</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="espacamento-cabecalho"></div>
+    <main>
+
+    <section id="doar" class="section donate-section" aria-labelledby="doar-titulo">
+      <div class="donation-text">
+        <h2 id="doar-titulo">Doação </h2>
+         <p>A Associação Fortaleza Azul (FAZ) é uma entidade sem fins lucrativos que nasceu do esforço e união de autistas e seus familiares, com a missão de prestar assistência social, defesa e proteção às pessoas no Transtorno do Espectro Autista (TEA) no Ceará. Diferentemente de muitas instituições, a FAZ sobrevive integralmente de doações e recursos privados e do esforço dos próprios pais. A manutenção da estrutura e a continuidade dos serviços dependem diretamente da sua solidariedade.</p>
+
+         <p>Sua contribuição financeira é o motor que nos permite suprir uma demanda crítica: o acesso a terapias essenciais que o Sistema Único de Saúde (SUS) muitas vezes não consegue cobrir. Os recursos arrecadados são aplicados na manutenção dos atendimentos terapêuticos, incluindo fonoaudiologia e psicomotricidade, que são vitais para o desenvolvimento e a inclusão plena das crianças e jovens com autismo.</p>
+       
+         <p>Além das terapias, a sua doação apoia a luta institucional da FAZ. Utilizamos esses recursos para promover a defesa judicial e extrajudicial dos direitos dos autistas, buscando políticas públicas e o cumprimento das leis que garantam o amparo constitucional e a dignidade de cada indivíduo. Seja através de bazares, de doação de itens ou de um PIX, cada valor doado é um investimento direto na qualidade de vida e no futuro de centenas de famílias que encontram na Fortaleza Azul o acolhimento e o suporte que precisam. Ajude-nos a manter esta "fortaleza" de apoio ativa!</p>
+        </div>
+        
+         <form class="donation-form" onsubmit="return false;" aria-describedby="donation-note">
+          
+          <label>
+            Nome completo
+            <input type="text" name="name" placeholder="Seu nome" required>
+          </label>
+  
+        
+          <label>
+            E‑mail
+            <input type="email" name="email" placeholder="seu@exemplo.com" required>
+          </label>
+  
+          
+          <fieldset class="amounts" aria-label="Valores sugeridos">
+            <legend>Escolha um valor</legend>
+  
+            
+            <div class="preset-buttons" role="group" aria-label="Valores rápidos">
+              <button type="button" data-amount="10">R$10</button>
+              <button type="button" data-amount="25">R$25</button>
+              <button type="button" data-amount="50">R$50</button>
+              <button type="button" data-amount="100">R$100</button>
+            </div>
+  
+         
+            <label class="custom-amount">
+              Ou outro valor
+              <input type="number" name="amount" min="1" step="1" placeholder="0" required>
+            </label>
+          </fieldset>
+  
+         
+          <fieldset class="frequency" aria-label="Frequência da doação">
+            <legend>Frequência</legend>
+            <label><input type="radio" name="freq" value="once" checked> Uma vez</label>
+            <label><input type="radio" name="freq" value="monthly"> Mensal</label>
+          </fieldset>
+           
+          <div class="form-actions">
+            <button type="button" class="btn-primary" id="donateBtn">Doar (simular)</button>
+            <button type="reset" class="btn-secondary">Limpar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+        <section id="contato-rodape">
+            <h3>Entre em Contato Conosco</h3>
+            <p>E-mail:associacaofortalezaazul@gmail.com </p>
+             <p>Endereço: Rua Elizeu Oria 970(atual) </p> 
+            <p>Siga-nos: <a href="https://www.instagram.com/fortalezaazul/" target="_blank">Instagram</a></p>
+            <p>&copy; 2025 Associação Fortaleza Azul - Todos os direitos reservados.</p> 
+        </section>
+       
+        </footer>
+        <script>
+           //defini as ferramentas que serão usadas(ou pelomenos essas são as melhores palavra que eu emcontri)
+            (function(){
+              const presetBtns = document.querySelectorAll('.preset-buttons button');
+              const amountInput = document.querySelector('input[name="amount"]');
+              const donateBtn = document.getElementById('donateBtn');
+        
+              presetBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                  // marca um valor
+                  amountInput.value = btn.dataset.amount;
+                  // essa parte é so visual
+                  presetBtns.forEach(b => b.classList.remove('active'));
+                  btn.classList.add('active');
+                });
+              });
+        
+              donateBtn.addEventListener('click', () => {
+                // essa parte é para coloca uma espeçe de resumo.
+                const name = document.querySelector('input[name="name"]').value || '(não informado)';
+                const email = document.querySelector('input[name="email"]').value || '(não informado)';
+                const amount = document.querySelector('input[name="amount"]').value || '(0)';
+                alert('Simulação de doação\\nNome: ' + name + '\\nE-mail: ' + email + '\\nValor: R$' + amount + '\\n\\nNenhum pagamento será processado — página de demonstração.');
+              });
+            })();
+          </script>
+
+    </body>
+    </html>
